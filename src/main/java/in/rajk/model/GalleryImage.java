@@ -5,8 +5,6 @@ import lombok.*;
 
 @Entity
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class GalleryImage {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

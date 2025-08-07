@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gym-by-raj
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gym-by-raj
+  template:
+    metadata:
+      labels:
+        app: gym-by-raj
+    spec:
+      containers:
+        - name: spring-container
+          image: 593793038585.dkr.ecr.us-east-1.amazonaws.com/gym-management-repo
+          ports:
+            - containerPort: 2003
